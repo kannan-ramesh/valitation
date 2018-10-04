@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src = "login.js" type="text/javascript"></script>
+</head>
+<body>
+  <h2 class="w3-text-blue">Registration form</h2>
+  <p>
+  <label class="w3-text-blue"><b>User Name</b></label>
+  <input class="w3-input w3-border" id="uname"  name="uname" type="text" placeholder="user Name"></p>
+  <div id= uname-error></div>
+  <p>
+  <label class="w3-text-blue"><b>Password</b></label>
+  <input class="w3-input w3-border"  id="upass" name="pass" type="text" placeholder="Password"></p>
+  <div id= upass-error></div>
+  <p>
+  <button class="w3-btn w3-blue" id="regForm" onclick="valitation()">Register</button></p>
+  <style type="text/css">
+   .w3-button {
+    border: none;
+    display: inline-block;
+    padding: 20px 25px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.w3-input {
+    width: 130px;
+    height: 30px;
+    display: block;
+}
+
+#uname-error{
+  color: red;
+}
+#upass-error{
+  color: red;
+}
+
+</style>
+
+  <script type="text/javascript">
+      var valitation = function(){
+        var name = document.getElementById('uname').value;
+        var pass = document.getElementById('upass').value;
+        
+  
+          if(name=='')
+          {
+            uname.style.background='yellow';
+            document.getElementById('uname-error').innerHTML='enter username';
+          }else
+          {
+            uname.style.background='';
+            document.getElementById('uname-error').innerHTML='';
+          }
+          if(pass=='')
+          {
+            upass.style.background='yellow';
+            document.getElementById('upass-error').innerHTML='enter password';
+          }else
+          {
+            upass.style.background='';
+            document.getElementById('upass-error').innerHTML='';
+          }
+      }
+    
+      
+    
+        
+  </script>
+</body>
+</html>
